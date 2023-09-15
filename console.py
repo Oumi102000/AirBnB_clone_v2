@@ -10,6 +10,7 @@ class HBNBCommand(cmd.Cmd):
     contains the entry point of the command interpreter
     """
     prompt = "(hbnb) "
+
     def do_quit(self, line):
         """quit command to exit the HBNB console"""
         return True
@@ -22,6 +23,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Overrides the cmd emptyline method, do nothing"""
         pass
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
