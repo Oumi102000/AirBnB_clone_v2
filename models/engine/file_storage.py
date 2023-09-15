@@ -4,6 +4,10 @@ defines FileStorage module
 """
 import json
 from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.state import City
+from models.state import Amenity
 
 
 class FileStorage:
