@@ -18,7 +18,14 @@ class HBNBCommand(cmd.Cmd):
     contains the entry point of the command interpreter
     """
     prompt = "(hbnb) "
-    dict_classes = {"BaseModel": BaseModel}
+    dict_classes = {"BaseModel": BaseModel,
+                    "User": User,
+                    "State": State,
+                    "City": City,
+                    "Amenity": Amenity,
+                    "Place": Place,
+                    "Review": Review
+                    }
 
     def do_quit(self, line):
         """quit command to exit the HBNB console"""

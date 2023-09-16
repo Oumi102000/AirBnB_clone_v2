@@ -11,6 +11,7 @@ from models.amenity import Amenity
 from models.review import Review
 from models.place import Place
 
+
 class FileStorage:
     """creates a class for file storage
 
