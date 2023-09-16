@@ -2,7 +2,7 @@
 """
 Defines Review module
 """
-from modules.base_model import BaseModel
+from models.base_model import BaseModel
 
 class Review(BaseModel):
     """create review class
