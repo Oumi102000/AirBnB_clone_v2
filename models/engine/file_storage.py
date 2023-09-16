@@ -8,7 +8,8 @@ from models.user import User
 from models.state import State
 from models.city import City
 from models.amenity import Amenity
-
+from models.review import Review
+from models.place import Place
 
 class FileStorage:
     """creates a class for file storage
