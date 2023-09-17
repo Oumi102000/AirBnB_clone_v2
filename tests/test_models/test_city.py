@@ -52,4 +52,5 @@ class TestCity(unittest.TestCase):
         self.assertIn("my_number", my_city.to_dict())
         self.assertIn("__class__", my_city.to_dict())
         self.assertNotEqual(my_city.__dict__, my_city.to_dict())
-        self.assertEqual(my_city.to_dict()["created_at"], my_city.created_at.strftime(d_format))
+        self.assertEqual(my_city.to_dict()["created_at"],
+                         my_city.created_at.strftime(d_format))
