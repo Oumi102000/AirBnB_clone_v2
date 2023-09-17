@@ -51,4 +51,5 @@ class TestReview(unittest.TestCase):
         self.assertIn("text", rv.to_dict())
         self.assertIn("__class__", rv.to_dict())
         self.assertNotEqual(rv.__dict__, rv.to_dict())
-        self.assertEqual(rv.to_dict()["updated_at"], rv.updated_at.strftime(d_format))
+        self.assertEqual(rv.to_dict()["updated_at"],
+                         rv.updated_at.strftime(d_format))

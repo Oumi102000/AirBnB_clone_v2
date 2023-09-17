@@ -51,5 +51,5 @@ class TestState(unittest.TestCase):
         self.assertIn("my_number", my_state.to_dict())
         self.assertIn("__class__", my_state.to_dict())
         self.assertNotEqual(my_state.__dict__, my_state.to_dict())
-        self.assertEqual(my_state.to_dict()["created_at"], my_state.created_at.strftime(d_fotmat))
-
+        self.assertEqual(my_state.to_dict()["created_at"],
+                         my_state.created_at.strftime(d_format))
