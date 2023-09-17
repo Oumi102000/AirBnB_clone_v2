@@ -3,6 +3,7 @@
 Defines AirBnB console module
 """
 import cmd
+import re
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
@@ -144,6 +145,31 @@ class HBNBCommand(cmd.Cmd):
         my_object = storage.all()[obj_id]
         setattr(my_object, args[2], args[3])
         my_object.save()
+
+    def precmd(self, args):
+        """update precmd to handle the format : <class_name>.command()"""
+        line = re.match(r"^(\w+)\.(\w+)\(\)$", args)
+        if line:
+            cls_name = line.group(1)
+            command = line.group(2)
+            args = "{} {}".format(command, cls_name)
+        return cmd.Cmd.precmd(self, args)
+
+    def do_count(self, args):
+        """retrieve the number of instances of a class
+        Usage: <class_name>.count() or count <class_name>
+        """
+        args = args.split()
+        if not args:
+            print("** class name missing **")
+            return
+        if args[0] not in HBNBCommand.dict_classes.keys():
+            print("** class doesn't exist **")
+            return
+
+        counter = [obj for obj in storage.all().values()
+                   if isinstance(obj, HBNBCommand.dict_classes[args[0]])]
+        print(len(counter))
 
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ from models.place import Place
 from datetime import datetime
 
 
-class TestPlace(unittest;TestCase):
+class TestPlace(unittest.TestCase):
     """Testing all attributes and methods of Place class"""
 
     def test_Is_Instance(self):
@@ -61,5 +61,5 @@ class TestPlace(unittest;TestCase):
         self.assertIn("max_guest", my_place.to_dict())
         self.assertIn("__class__", my_place.to_dict())
         self.assertNotEqual(my_place.__dict__, my_place.to_dict())
-        self.assertEqual(my_place.to_dict()["created_at"], my_place.created_at.strftime(d_format))
-
+        self.assertEqual(my_place.to_dict()["created_at"],
+                         my_place.created_at.strftime(d_format))
