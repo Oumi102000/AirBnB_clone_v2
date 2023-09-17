@@ -148,11 +148,12 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, args):
         """update precmd to handle the format : <class_name>.command()"""
-        line = re.match(r"^(\w+)\.(\w+)\(\)$", args)
+        line = re.match(r"^(\w+)\.(\w+)(?:\((.*)\))$", args)
         if line:
             cls_name = line.group(1)
             command = line.group(2)
-            args = "{} {}".format(command, cls_name)
+            cls_id = line.group(3)
+            args = "{} {} {}".format(command, cls_name, cls_id)
         return cmd.Cmd.precmd(self, args)
 
     def do_count(self, args):
