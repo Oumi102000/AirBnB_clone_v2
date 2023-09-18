@@ -1,5 +1,5 @@
 # AirBnB clone - The console
-AirBnB-clone is a creation  of a full web application that simulate the well known __AirBnB__ application.
+AirBnB clone project is a creation of a full web application that simulate the well known __AirBnB__ application.
 
 ## Description
 This initial version of the AirBnB-clone app simply implements the back-end console that allows you to create, show, update and delete items.
@@ -16,8 +16,7 @@ Console is a commande line interpreter, also known as "command-line interface" (
 ### How to start it
 In order to gain access to our console, you must first clone the following repository:
 
-```https://github.com/hajarzaitouni/AirBnB_clone.git
-```
+`https://github.com/hajarzaitouni/AirBnB_clone.git`
 
 ### How to use it
 After cloning the repository, you will have access to all of our console's features.
@@ -120,7 +119,7 @@ As stated above, using our __AirBnB console__  you will have access to the follo
 	```
 
 * __destroy__
-	* `usage: destroy <class_name> <id>
+	* `usage: destroy <class_name> <id>`
 	* Example:
 	```
 	$ cat file.json ; echo ""
